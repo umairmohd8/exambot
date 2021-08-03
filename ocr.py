@@ -3,9 +3,9 @@ from pytesseract import pytesseract
 import glob
 
 #path to tesseract executable
-path_tess = r'D:\1softwares\ocr\tesseract.exe'
+path_tess = r'path_to_tesseract.exe\tesseract.exe'
 #path to image folder, change with your own path
-imgs_path = r"C:\Users\91953\Desktop\testbot\*"
+imgs_path = r"path_to_image folder\*"
 
 img_list = glob.glob(imgs_path)
 
