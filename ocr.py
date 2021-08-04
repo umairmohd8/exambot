@@ -25,11 +25,18 @@ def stringcheck(textarr,text):
         i = i + 1
 
 #keywords to search the image file
-istring = input("\nEnter the string:\n")
-i = stringcheck(text_list,istring)
+while(True):
+    istring = input("\nEnter the string:\n")
+    if(istring == "exit"):
+        exit()
+    try:
+        i = stringcheck(text_list,istring)
+        im = Image.open(img_list[i])
+        im.show()
+    except TypeError:
+        print("Not found, check spelling\n")
 
-im = Image.open(img_list[i])
-im.show()
+
 
 
 
